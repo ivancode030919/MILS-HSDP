@@ -19,9 +19,6 @@ Public Class qry
         Dim RPuser1 As String = "HSDP_DEPOT"
         Dim RPpass2 As String = "123456$hsdp"
 
-
-
-
         With Export
             .RPuser3 = RPuser1.ToString
             .RPpass3 = RPpass2.ToString

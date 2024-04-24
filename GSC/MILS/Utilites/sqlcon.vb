@@ -7,7 +7,8 @@ Public Class sqlcon
     ''EVERMORE DB
     'Public DBCon As New SqlConnection("Data Source=172.16.7.7;Initial Catalog=InventoryDB_KOR;User ID=HSDP_DEPOT;Password=123456$hsdp")
     ''HSDP
-    'Public DBCon As New SqlConnection("Data Source=172.16.7.7;Initial Catalog=InventoryDB;User ID=HSDP_DEPOT;Password=123456$hsdp")
+    'Public DBCon As New SqlConnection("Data Source=172.16.7.7;Initial Catalog=InventoryDB_CDO;Persist Security Info=True;User ID=HSDP_DEPOT;Password=123456$hsdp")
+
 
 
     Public DBCmd As SqlCommand

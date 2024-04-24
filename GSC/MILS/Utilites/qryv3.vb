@@ -1132,5 +1132,22 @@ ORDER BY T0.tileID;
     End Sub
 
 
+    'Fetch DB name
+    Public Sub FetchDb()
+
+        SQL.ExecQueryDT("Select DB_NAME()")
+        If SQL.HasException(True) Then Exit Sub
+
+        With newHome
+            If SQL.RecordCountDT <> 0 Then
+                For Each r As DataRow In SQL.DBDT.Rows
+                    .databse = r(0)
+                Next
+            End If
+        End With
+
+
+    End Sub
+
 
 End Class

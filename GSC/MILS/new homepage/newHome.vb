@@ -10,9 +10,10 @@ Public Class newHome
     Public branch As String
     Public notif1 As Boolean = False
     Private q As New qry
+    Private n As New qryv3
     Public alreadyClose As Boolean = False
     Private IPadd
-
+    Public databse As String
     Function GetIPv4Address() As String
         Dim hostName As String = Dns.GetHostName()
         Dim ipAddresses As IPAddress() = Dns.GetHostEntry(hostName).AddressList
@@ -31,10 +32,10 @@ Public Class newHome
 
 
     Private Sub NewHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        n.FetchDb()
         BarStaticItem2.Caption = "User: " & empname & "    " + "Area: " & branch
         BarStaticItem3.Caption = "Date: " + Date.Now.ToString("MM/dd/yyyy")
-        Label1.Text = " IP Address: " & GetIPv4Address() + "    " + " Version 3.0"
+        Label1.Text = " IP Address: " & GetIPv4Address() + "    " + " Version 3.0" + " || " + databse
 
         If roleId = 20020 Then
             Timer1.Enabled = True
